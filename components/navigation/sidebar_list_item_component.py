@@ -1,5 +1,5 @@
 from playwright.sync_api import Page, expect
-
+from typing import Pattern
 from components.base_component import BaseComponent
 
 
