@@ -9,6 +9,8 @@ from tools.allure.stories import AllureStory
 from allure_commons.types import Severity
 from tools.routes import AppRoute
 from config import settings
+
+
 @pytest.mark.regression
 @pytest.mark.registration
 @allure.tag(AllureTag.REGRESSION, AllureTag.REGISTRATION)

@@ -1,5 +1,4 @@
 import pytest
-
 from pages.courses.courses_list_page import CoursesListPage
 from pages.courses.create_course_page import CreateCoursePage
 import allure
@@ -10,7 +9,8 @@ from tools.allure.stories import AllureStory
 from allure_commons.types import Severity
 from tools.routes import AppRoute
 from config import settings
-pytestmark = pytest.mark.django_db
+
+
 @pytest.mark.courses
 @pytest.mark.regression
 @allure.tag(AllureTag.REGRESSION, AllureTag.COURSES)
@@ -99,7 +99,7 @@ class TestCourses:
             title='Playwright',
             max_score='100',
             min_score='10',
-            estimated_time = '2 weeks'
+            estimated_time='2 weeks'
         )
 
         courses_list_page.course_view.menu.click_edit(0)
@@ -118,7 +118,5 @@ class TestCourses:
             title='edited course',
             max_score='5',
             min_score='1',
-            estimated_time = '3 weeks'
+            estimated_time='3 weeks'
         )
-
-
